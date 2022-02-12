@@ -1,6 +1,7 @@
 const axios = require('axios')
 const {Country, Activity} = require('../db')
-const {API} = process.env
+const {API} = 'https://restcountries.com/v3/name/'
+
 
 
 let getCountry = async()=>{
