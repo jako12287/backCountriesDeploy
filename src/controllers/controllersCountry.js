@@ -1,6 +1,5 @@
 const axios = require('axios')
 const {Country, Activity} = require('../db')
-const {API} = 'https://restcountries.com/v3/all'
 
 
 
@@ -10,9 +9,8 @@ let getCountry = async()=>{
             let show = await Country.findAll({include: Activity})
         
         if(show.length === 0){
-            let getCountries = await axios.get(`${API}`)
+            let getCountries = await axios.get('https://restcountries.com/v3/all')
             let data = await getCountries.data
-            let id = 1;
             let showApi = data.map((el)=>{
                 return {
             id: el.cca3,    
