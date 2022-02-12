@@ -1,6 +1,6 @@
 const axios = require('axios')
 const {Country, Activity} = require('../db')
-const {API} = 'https://restcountries.com/v3/name/'
+const {API} = 'https://restcountries.com/v3/all'
 
 
 
